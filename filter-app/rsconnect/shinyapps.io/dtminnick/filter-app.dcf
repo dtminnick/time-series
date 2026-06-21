@@ -1,0 +1,10 @@
+name: filter-app
+title:
+username: dtminnick
+account: dtminnick
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 17534637
+bundleId: 12155986
+url: https://dtminnick.shinyapps.io/filter-app/
+version: 1
