@@ -60,7 +60,7 @@ $$
 
 The original value is $x_1 = 1$ and the filtered value is 1.
 
-### At $x_2 = 2$
+### At $t = 2$
 
 * $x_3 = 3$
 * $x_2 = 2$
@@ -126,6 +126,7 @@ $$
 ## Example 2: A Filter That Does Distort a Line
 
 I use the same line for this example: 
+
 $$
 x_t = t
 $$
@@ -208,6 +209,7 @@ $$
 $$
 
 Instead:
+
 $$
 \sum j\psi_j = 1.
 $$
@@ -248,6 +250,11 @@ beyond that range.  Even if you pull all the weight to $j = 2$, the shift is
 bounded by that maximum lag.  The support of the filter caps how far you can 
 push the line.
 
+**Some negative weights can be allowed and still preserve the line.**
+
+For example, a filter like [-0.1, 0.3, 0.6, 0.3, -0.1] is symmetric, sums to one, 
+includes negative weights, and preserves any $a + bt$ line.
+
 ## Question
 
 If any symmetric filter whose weights sum to one will pass a line perfectly, 
@@ -260,15 +267,18 @@ All of these filters leave the straight line we started with:
 * [0.25, 0.5, 0.25]
 * [0.1, 0.2, 0.4, 0.2, 0.1]
 
-But even though they all preserve a line, they do not preserve curvature, bumps, 
-noise, seasonal changes, and turning points in the same way.
+They all sum to one will pass a line unchanged, but they differ in how they treat 
+everything else. The choice of filter determines:
 
-### Concrete differences between filters
+* how much smoothing you get,
+* how aggressively noise is removed,
+* how much curvature is preserved or destroyed,
+* how sharply peaks and turning points are damped,
+* how wide the effective averaging window is, and
+* how much high‑frequency content is suppressed.
 
-#### Narrow symmetric filter $[0, 0, 1, 0, 0]$
-
-* Provides no smoothing
-* 
+So even though these filters agree on straight lines, they disagree on everything 
+that isn’t a straight line.
 
 
 
