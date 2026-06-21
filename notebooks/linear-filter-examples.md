@@ -1,8 +1,10 @@
-# Exploratory Notes: Building Intuition for Linear Filters (AI‑Assisted)
+# Exploratory Notes: Building Intuition for Linear Filters
 
-I used AI to help me work through two simple examples to build intuition about how 
+I used Microsoft Copilot to help me work through two simple examples to build intuition about how 
 linear filters behave.  The examples and explanations in this notebook were 
-generated collaboratively with AI as a learning aid.
+generated collaboratively with AI as a learning aid.  After working through these 
+examples, I created [this Shiny app](https://dtminnick.shinyapps.io/filter-app/) 
+to build my intuition.
 
 ## Example 1: A Filter That Does Not Distort a Line
 
