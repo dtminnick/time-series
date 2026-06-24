@@ -279,8 +279,7 @@ everything else. The choice of filter determines:
 * how wide the effective averaging window is, and
 * how much high‑frequency content is suppressed.
 
-So even though these filters agree on straight lines, they disagree on everything 
-that isn’t a straight line.
+So even though these filters agree on straight lines, they will handle series that are not straight lines differently.
 
 
 
