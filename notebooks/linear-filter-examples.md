@@ -21,6 +21,8 @@ I chose a simple line $x_t = t$ with the following values:
 
 This is a straight line through the origin.
 
+Intercept $a = 0$ and slope $b = 1$.
+
 I use the symmetric filter:
 
 $$
@@ -50,6 +52,8 @@ $$
 
 The original value is $x_0 = 0$ and the filtered value is $0$.
 
+So $a + bt = 0 + 1(0) = 0$.
+
 ### At $t = 1$
 
 * $x_2 = 2$
@@ -62,6 +66,8 @@ $$
 
 The original value is $x_1 = 1$ and the filtered value is 1.
 
+$a = bt = 0 + 1(1) = 1$
+
 ### At $t = 2$
 
 * $x_3 = 3$
@@ -73,6 +79,8 @@ $$
 $$
 
 The original value is $x_2 = 2$ and the filtered value is 2.
+
+$a + bt = 0 + 1(2) = 2$.
 
 For this filter and this line:
 
@@ -162,10 +170,12 @@ Now apply the filter to the line.
 * $x_{-1} = -1$
 
 $$
-\psi(b)x_0 = x_{t-1} = -1
+\psi(B)x_0 = x_{t-1} = -1
 $$
 
 The original value is $x_0 = 0$ and the filtered value is $-1$.
+
+$a + bt = 0 + 1(0) = 0$.
 
 ### At $t = 1$
 
@@ -178,6 +188,8 @@ $$
 
 The original value is $x_1 = 1$ and the filtered value is $0$.
 
+$a + bt = 0 + 1(1) = 1$.
+
 ### At $t = 2$
 
 * $x_2 = 2$
@@ -188,6 +200,8 @@ $$
 $$
 
 The original value is $x_2 = 2$ and the filtered value is $1$.
+
+$a + bt = 0 + 1(2) = 2$.
 
 To confirm the distortion, I compare the original and filtered values:
 
