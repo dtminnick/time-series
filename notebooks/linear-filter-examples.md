@@ -21,6 +21,8 @@ I chose a simple line $x_t = t$ with the following values:
 
 This is a straight line through the origin.
 
+Intercept $a = 0$ and slope $b = 1$.
+
 I use the symmetric filter:
 
 $$
@@ -50,6 +52,8 @@ $$
 
 The original value is $x_0 = 0$ and the filtered value is $0$.
 
+So $a + bt = 0 + 1(0) = 0$.
+
 ### At $t = 1$
 
 * $x_2 = 2$
@@ -62,6 +66,8 @@ $$
 
 The original value is $x_1 = 1$ and the filtered value is 1.
 
+$a = bt = 0 + 1(1) = 1$
+
 ### At $t = 2$
 
 * $x_3 = 3$
@@ -73,6 +79,8 @@ $$
 $$
 
 The original value is $x_2 = 2$ and the filtered value is 2.
+
+$a + bt = 0 + 1(2) = 2$.
 
 For this filter and this line:
 
@@ -114,7 +122,7 @@ $$
 then the filter preserves the intercept and the slope because the filtered value becomes:
 
 $$
-\psi(b)(a + bt) = a(1) + bt(0) = a + bt.
+\psi(b)(a + bt) = a(0) + b(1)t = a + bt.
 $$
 
 So the line stays exactly the same.
@@ -142,7 +150,7 @@ $$
 | 2   | 2     |
 | 3   | 3     |
 
-And I use the simplest asymmetric filter possible:
+And I use a simple asymmetric filter:
 
 * $\psi_{-2} = 0$
 * $\psi_{-1} = 0$
@@ -150,7 +158,7 @@ And I use the simplest asymmetric filter possible:
 * $\psi_1 = 1$
 * $\psi_2 = 0$
 
-This filter is $\psi(B)x_t = x_{t-1}$.  This is the backshift.  It breaks symmetry 
+This filter is $\psi(B)x_t = x_{t-1}$.  It breaks symmetry 
 because all the weight is on one side, even though the weights sum to one. So I 
 expect the filter to distort the line.
 
@@ -162,10 +170,12 @@ Now apply the filter to the line.
 * $x_{-1} = -1$
 
 $$
-\psi(b)x_0 = x_{t-1} = -1
+\psi(B)x_0 = x_{t-1} = -1
 $$
 
 The original value is $x_0 = 0$ and the filtered value is $-1$.
+
+$a + bt = 0 + 1(0) = 0$.
 
 ### At $t = 1$
 
@@ -178,6 +188,8 @@ $$
 
 The original value is $x_1 = 1$ and the filtered value is $0$.
 
+$a + bt = 0 + 1(1) = 1$.
+
 ### At $t = 2$
 
 * $x_2 = 2$
@@ -188,6 +200,8 @@ $$
 $$
 
 The original value is $x_2 = 2$ and the filtered value is $1$.
+
+$a + bt = 0 + 1(2) = 2$.
 
 To confirm the distortion, I compare the original and filtered values:
 
@@ -365,8 +379,7 @@ everything else. The choice of filter determines:
 * how wide the effective averaging window is, and
 * how much high‑frequency content is suppressed.
 
-So even though these filters agree on straight lines, they disagree on everything 
-that isn’t a straight line.
+So even though these filters agree on straight lines, they will handle series that are not straight lines differently.
 
 
 
