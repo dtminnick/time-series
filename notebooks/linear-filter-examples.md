@@ -219,6 +219,92 @@ $$
 This means the filter has a center of mass shifted to the right, so it pulls the 
 line left (or down, depending on how you visualize it).
 
+## Example 3: Another Distortion
+
+| $t$ | $x_t$ |
+| --- | ----- |
+| -2  | -2    |
+| -1  | -1    |
+| 0   | 0     |
+| 1   | 1     |
+| 2   | 2     |
+| 3   | 3     |
+
+And I use the simplest asymmetric filter possible:
+
+* $\psi_{-2} = 0$
+* $\psi_{-1} = 1$
+* $\psi_0 = 0$
+* $\psi_1 = 0$
+* $\psi_2 = 0$
+
+This filter is $\psi(B)x_t = x_{t+1}$.
+
+Now apply the filter to the line.
+
+### At $t = 0$
+
+* $x_0 = 0$
+* $x_1 = 1$
+
+$$
+\psi(B)x_0 = x_1 = 1
+$$
+
+The original value is $x_0 = 0$ and the filtered value is $1$.
+
+### At $t = 1$
+
+* $x_1 = 1$
+* $x_2 = 2$
+
+$$
+\psi(B)x_1 = x_2 = 2
+$$
+
+The original value is $x_1 = 1$ and the filtered value is $2$.
+
+### At $t = 2$
+
+* $x_2 = 2$
+* $x_3 = 3$
+
+$$
+\psi(B)x_2 = x_3 = 3
+$$
+
+The original value is $x_2 = 2$ and the filtered value is $3$.
+
+To confirm the distortion, I compare the original and filtered values:
+
+| $t$ | Original $x_t$ | Filtered $\psi(B)x_t$ |
+| --- | -------------- | --------------------- |
+| 0   | 0              | 1                     |
+| 1   | 1              | 2                     |
+| 2   | 2              | 3                     |
+
+The filtered line is:
+
+$$
+\psi(B)x_t = t + 1.
+$$
+
+This is the same slope, but the line is shifted up by one.  That is an example of 
+distortion. This happened because the filter violated the symmetry condition:
+
+$$
+\sum_j j\psi_j = 0.
+$$
+
+Instead:
+
+$$
+\sum_j j\psi_j = -1.
+$$
+
+This means the filter has a center of mass shifted to the left, so it pulls the 
+line left (or up, depending on how you visualize it).
+
 ## Observations
 
 After experimenting with filters using a Shiny app, I noted the following behaviors.
