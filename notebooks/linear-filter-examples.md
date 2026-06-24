@@ -122,7 +122,7 @@ $$
 then the filter preserves the intercept and the slope because the filtered value becomes:
 
 $$
-\psi(b)(a + bt) = a(1) + bt(0) = a + bt.
+\psi(b)(a + bt) = a(0) + b(1)t = a + bt.
 $$
 
 So the line stays exactly the same.
