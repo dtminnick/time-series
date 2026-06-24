@@ -150,7 +150,7 @@ $$
 | 2   | 2     |
 | 3   | 3     |
 
-And I use the simplest asymmetric filter possible:
+And I use a simple asymmetric filter:
 
 * $\psi_{-2} = 0$
 * $\psi_{-1} = 0$
@@ -158,7 +158,7 @@ And I use the simplest asymmetric filter possible:
 * $\psi_1 = 1$
 * $\psi_2 = 0$
 
-This filter is $\psi(B)x_t = x_{t-1}$.  This is the backshift.  It breaks symmetry 
+This filter is $\psi(B)x_t = x_{t-1}$.  It breaks symmetry 
 because all the weight is on one side, even though the weights sum to one. So I 
 expect the filter to distort the line.
 
