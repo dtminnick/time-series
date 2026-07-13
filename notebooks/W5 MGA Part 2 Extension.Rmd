@@ -1,6 +1,6 @@
 ---
 title: "Durbin-Levinson Recursion for an MA1 Model"
-output: html_notebook
+output: md_document
 ---
 
 ```{r}
