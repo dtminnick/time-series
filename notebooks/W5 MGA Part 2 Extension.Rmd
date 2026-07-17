@@ -11,6 +11,8 @@ The following R code verifies the analytical results from Part 2 by computing th
 
 The code computes both sets of coefficients and applies the predictor to simulated MA(1) data to confirm that the numerical results match the closed‑form expressions derived in Part 2. It also includes a simple “recovery” check showing that the same predictor coefficients correctly reconstruct $X_3$ from later observations.
 
+The recovery values differ from the prediction values because they use different data points, not because the coefficients change.
+
 ```{r}
 library(stats)
 
