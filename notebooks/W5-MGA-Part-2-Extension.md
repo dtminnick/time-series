@@ -1,11 +1,11 @@
 The following R code verifies the analytical results from Part 2 by
-computing the MA(1) autocovariances, Durbin–Levinson PACF recursion
+computing the MA(1) autocovariances, Durbin–Levinson recursion
 values, and the correct linear predictor coefficients for
 *P*(*X*<sub>3</sub>|*X*<sub>1</sub>, *X*<sub>2</sub>). It separates
 three distinct sets of values:
 
 1.  autocovariances,
-2.  PACF recursion coefficients, and
+2.  recursion coefficients, and
 3.  linear predictor coefficients.
 
 The code computes both sets of coefficients and applies the predictor to
