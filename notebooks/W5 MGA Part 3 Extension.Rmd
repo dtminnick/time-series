@@ -14,14 +14,18 @@ $$
 $$
 
 the denominator
+
 $$
 \sum^n_{t=1} (x_t - \bar{x})^2,
 $$
 
 and the sample ACF
+
 $$
 \rho_1 = \frac{numerator}{denominator}
 $$
+
+Reusable function to capture components:
 
 ```{r}
 acf_components <- function(x) {
